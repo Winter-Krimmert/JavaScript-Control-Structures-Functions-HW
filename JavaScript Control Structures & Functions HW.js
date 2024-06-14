@@ -62,7 +62,7 @@ function calculateTotalCost() {
 
     //Display the total cost of the items in the cart
     if(cart.length > 0) { //checks if the cart is empty. If the cart is not empty, the total cost is calculated and displayed.
-        console.log('Total cost: $, $${calculateTotalCost().toFixed(2)}'); // prints the total cost of the items in the cart. The toFixed() method formats the number to 2 decimal places.
+        console.log('Total cost: $, ${calculateTotalCost().toFixed(2)}'); // prints the total cost of the items in the cart. The toFixed() method formats the number to 2 decimal places.
     } else {
         console.log("Your cart is empty.");
     }
@@ -73,18 +73,18 @@ function calculateTotalCost() {
     let balance = 0; //initializes the balance variable to 0.
     function deposit(amount) { //naming the function 'deposit' and using 'amount' as a parameter. 'amount' is the amount to be deposited.
         balance += amount; //increments the balance by the amount deposited.
-        console.log('${amount} has been deposited into your account. New balance: $${balance.tofixed(2)}'); //prints a template literal with the amount deposited.
+        console.log('${amount} has been deposited into your account. New balance: ${balance.tofixed(2)}'); //prints a template literal with the amount deposited.
     }
 
     //Example deposit
-    deposit(100); // $100 has been deposited into your account. New balance: $${balance.tofixed(2)'}; //prints the amount deposited and the new balance after the deposit.
+    deposit(100); // $100 has been deposited into your account. New balance: ${balance.tofixed(2)'}; //prints the amount deposited and the new balance after the deposit.
     
     //Task 2
     // Create a function to handle withdrawals from a bank account. Ensure that the account has sufficient funds before allowing a withdrawal.
     function withdraw(amount) {
         if (amount <= balance) {
             balance -= amount; //decrements the balance by the amount withdrawn.
-            console.log('Withdrew $${amount}. New balance: $${balance.tofixed(2)}'); //prints the amount withdrawn and the new balance after the withdrawal.
+            console.log('Withdrew ${amount}. New balance: ${balance.tofixed(2)}'); //prints the amount withdrawn and the new balance after the withdrawal.
         }   else {
             console.log("Insufficient funds."); //prints a message indicating that the account has insufficient funds.
         }
@@ -92,7 +92,7 @@ function calculateTotalCost() {
     // Task 3
     // Function for current balance. This function will return the current balance of the account.
     function checkBalance() {
-        console.log('Current balance: $${balance.tofixed(2)}'); //prints the current balance of the account.
+        console.log('Current balance: ${balance.tofixed(2)}'); //prints the current balance of the account.
     }
 
     //Example balance check
